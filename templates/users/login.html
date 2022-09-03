@@ -1,0 +1,106 @@
+{% extends 'index.html' %}
+{% load crispy_forms_tags %}
+{% block css %}
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+    
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    
+    .container {
+      padding: 16px;
+    }
+    
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+         display: block;
+         float: none;
+      }
+      .cancelbtn {
+         width: 100%;
+      }
+    }
+    .login{
+		  background: #f7f7f7;
+	    display: inline-block;
+	    padding: 15px 0px;
+      margin-left: 290px;
+	    border: 1px solid #dddddd;
+	    margin-top: 5px;
+      min-width: 70vh;
+      min-height: 60vh;
+	    }
+    </style>
+    {% endblock css %}
+{% block content %}
+<section>
+  <div class="container">
+    <div class="login">
+  <div class="col-md-12">
+    <div class="d-flex justify-content-center h-100">
+        <div class="user_card">
+            <div class="d-flex justify-content-center form_container">
+            <form action="" method="post">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">Sign In</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="d-flex justify-content-center mt-3 login_container">
+                    <button type="submit" name="button" class="btn login_btn">Login</button>
+                  </div>
+            </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">Do you need an account? <a href="{% url 'register' %}">Register Now</a></small>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+{% endblock content %}

@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% load blog_tags %}
+{% block navbar %}
+<li><a href="/">Home</a></li>
+<li><a href="/aboutus/">About Us</a></li>
+<li><a href="/services/">Services</a></li>
+<li><a href="/portfolio/">Portfolio</a></li>
+<li class="active"><a href="/blog/">Blogs</a></li>
+<!-- <li><a href="/career/">Careers</a></li> -->
+<li><a href="/contactus/">Contact Us</a></li>
+{% endblock navbar %}
+{% block title %}My Blog{% endblock %}
+<style>
+  
+  #sidebar { 
+    float:right;
+    width:30%;
+    padding:10px;
+    background:#efefef; 
+    height:100%;
+  }
+  </style>
+
+{% block content %}
+  <center><h1>Nerdware Blogs</h1></center>
+  <section class="development-categories bg-gray">
+    <div class="container">
+      <div class="col-md-14">
+        <div class="box-title-desc">
+         
+         
+  {% if tag %}
+    <h2>Posts tagged with "{{ tag.name }}"</h2>
+  {% endif %}
+  {% for post in posts %}
+    <h2>
+      <img src="{% if post.banner %}{{ post.banner.url }}{% else %}{{ MEDIA_URL}}/media/default/python-django.png{% endif %}" width="200" height="200" /> <br><br>
+      <a href="{{ post.get_absolute_url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    <p class="tags">
+      Tags:
+      {% for tag in post.tags.all %}
+        <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+          {{ tag.name }}
+        </a>
+        {% if not forloop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+    <p class="date">
+      Published {{ post.publish }} by {{ post.author }}
+    </p>
+    {{ post.body|markdown|truncatewords_html:30 }}
+  {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include "pagination.html" with page=posts %}
+{% endblock content %}

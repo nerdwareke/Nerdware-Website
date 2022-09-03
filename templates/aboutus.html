@@ -1,0 +1,296 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block navbar %}
+<li><a href="/">Home</a></li>
+<li class="active"><a href="/aboutus/">About Us</a></li>
+<li ><a href="/services/">Services</a></li>
+<li><a href="/portfolio/">Portfolio</a></li>
+<li><a href="/blog/">Blogs</a></li>
+<!-- <li><a href="/career/">Careers</a></li> -->
+<li><a href="/contactus/">Contact Us</a></li>
+{% endblock navbar %}
+{% block content %}
+      <!-- END SCOPE NAVBAR BOOTSTRAP -->
+      
+      <section class="sub-header parallax-nerdware bg-service">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="title">
+              About us
+            </div>
+            <div class="description">
+              <!-- Our mission is to help you getting the most out of your digital presence. If you need a harmonious team of designers & developers to your project, you've come to the right place! -->
+              Our main aim is to help you bring your business online and allow you to have an astute digital presence. We have a dedicated team of designers and developers that will work on your project and satisfactorily cater to your needs.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE SUB HEADER -->
+      
+      <!-- START SCOPE INFORMATION DETAIL ABOUTUS -->
+      <section class="content-video">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="text-center">
+                <div class="content-wrapper">
+                  <div class="title">
+                    Regarding us, Nerdware Systems Technologies
+                  </div>
+                  <div class="desc">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#about-visi" aria-expanded="true" aria-controls="about-visi">
+                              Our Vision
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="about-visi" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            To translate knowledge into innovative applications that will have significant societal and economic impacts globally.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#misi" aria-expanded="false" aria-controls="misi">
+                              Our Mission
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="misi" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                          <div class="panel-body">
+                           Our dream is to touch lives through innovation and technology.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#target" aria-expanded="false" aria-controls="target">
+                             Our Target Plan
+                            </a>
+                          </h4>
+                        </div>
+                        <div id="target" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                          <div class="panel-body">
+                           <ul>
+                            <li>Train kids on digital skills to enable them to be technology literate and introduce them to emerging technologies.</li>
+                            
+                           <li>Allow designers and developers to solve real life problems for clients through remote work</li>
+
+                            <li>Organize challenges to spark innovation for developers by allowing them to showcase their skills to prospective clients.</li>
+                          </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="text-center">
+                  <a href="/download/" class="btn btn-default btn-lg">
+                    <i class="fa fa-download"></i>
+                    Company Profile Download
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE INFORMATION DETAIL ABOUTUS -->
+
+      <!-- START SCOPE COUNTING DATA -->
+     <!-- <div class="counting-data">
+        <div class="list-data">
+          <ul>
+            <li>
+              <div class="title">
+                Full time resource
+              </div>
+              <div class="number">
+                <span class="incrementalNumber" set-time="3000" data-value="20"></span>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                Projects
+              </div>
+              <div class="number">
+                <span class="incrementalNumber" set-time="3000" data-value="4"></span>
+              </div>
+            </li>
+            <li>
+              <div class="title">
+                Client
+              </div>
+              <div class="number">
+                <span class="incrementalNumber" set-time="3000" data-value="5"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END SCOPE COUNTING DATA -->
+      
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Meet our team</span>
+              </div>
+              <div class="desc color-white">
+                We are team professional
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/musta1.jpg' %}" alt="CEO">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Brian Rono Musta</div>
+                          <div class="position">CEO</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/cto.jpg '%}" alt="CTO">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Vincent Langat</div>
+                          <div class="position">CTO</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/will.png '%}" alt="COO" width="500" height="1200">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">William Mbogo</div>
+                          <div class="position">COO</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/cto.jpg '%}">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Patrick Cheruiyot</div>
+                          <div class="position">Lead Developer</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/will.png '%}">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Peter Cheruiyot</div>
+                          <div class="position">Technical Sales</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/will.png '%}">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Duncan Chepkwony</div>
+                          <div class="position">Bussines Development</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="{% static 'images/client/will.png '%}">
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Christopher Khajira</div>
+                          <div class="position">Presales Executive</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE OUR TEAM -->
+
+      <!-- START SCOPE CLIENT & PARTNER  -->
+      <!--  
+        1. BPKP
+        2. PT. Buana Pacific Intenational
+        3. Casante International Hotel Management
+        4. Niscom Data Solution
+        5. Super Soft
+        6. Alita
+        7. Soiitz
+        8. Elitry
+        9. Miracle Details
+        10. Skillagogo PTE LTD
+        11. pemerintah kabupaten tangerang
+        12. inotech
+        13. BPDP
+      -->
+      <!-- END SCOPE CLIENT  -->
+
+      <!-- START SCOPE CAREER INTRODUCE -->
+      <!--- <section class="parallax-nerdware bg-img-1 introduce-wrapper portfolio">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-white">
+                <span class="color-white">CAREERS</span>
+              </div>
+              <div class="desc color-white">
+                Nerdware Systems Technologies supports the innovation and growth of Various Careers for IT and Business Specialists. 
+              </div>
+              <a href="/career/" class="btn btn-primary btn-lg">
+                <i class="fa fa-bars"></i>
+                Careers
+              </a>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- END SCOPE CAREER INTRODUCE -->
+
+ {% endblock content %}  <!-- SCOPE JAVASCRIPT -->

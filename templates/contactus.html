@@ -1,0 +1,277 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block navbar %}
+<li><a href="/">Home</a></li>
+<li><a href="/aboutus/">About Us</a></li>
+<li><a href="/services/">Services</a></li>
+<li><a href="/portfolio/">Portfolio</a></li>
+<li><a href="/blog/">Blogs</a></li>
+<!-- <li><a href="/career/">Careers</a></li> -->
+<li class="active"><a href="/contactus/">Contact Us</a></li>
+{% endblock navbar %}
+{% block content %}
+      
+      
+      <!-- START SCOPE INFORMATION ADDRESS -->
+      <div class="adresses">
+        <div class="list-data">
+          <ul>
+            <li>
+              <div class="icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div class="info">
+                Isaac Salat Road, Kericho
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="info">
+                (+254)707263447 - (+254)723753014
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="info">
+                admin@nerdwaresystems-nerdwaresystems.com
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END SCOPE INFORMATION ADDRESS -->
+      <!-- START SCOPE MAPS GOOGLE -->
+      <!--<div class="maps-contact">
+        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCPrHvdSkk62Nk3w-xxzYRBzafIYJbi8xM'></script>
+        <div style='overflow:hidden;height:759px;width:100%;'>
+          <div id='gmap_canvas' style='height:759px;width:100%;'></div>
+        </div> 
+        <a href='https://embed-map.org/'>embed google maps in website</a>
+        <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=0581b56618fc3ab620e50998b1861987aad72755'></script>
+        <script type='text/javascript'>
+          function init_map() {
+            var myOptions = {
+              scrollwheel: false,
+              zoom: 15,
+              center: new google.maps.LatLng(-0.362807, 35.290885),
+              mapTypeId: google.maps.MapTypeId.TERRAIN
+            };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({
+              map: map,
+              position: new google.maps.LatLng(-0.362807, 35.290885)
+            });
+            infowindow = new google.maps.InfoWindow({
+              content: '<strong>Nerdware Systems. Isaac Salat Road, Kericho<br>'
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+          }
+          google.maps.event.addDomListener(window, 'load', init_map);
+        </script>
+      </div>
+      <!-- END SCOPE MAPS GOOGLE -->
+      <!-- START SCOPE FORM CONTACT US -->
+      <section class="bg-white">
+        <div id = "contact-nerdware" class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Contact Us</span>
+              </div>
+              <div class="desc color-black">
+                Get in touch with us anytime.
+                <br>We live online.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="tab-form-contact">
+              <ul class="nav nav-tabs" role="tablist">
+                {% if request.user.is_authenticated %}
+                <li role="presentation">
+                  <a href="#contact-project" aria-controls="contact-project" role="tab" data-toggle="tab">
+                    <i class="fa fa-check-circle"></i>
+                    I wanna talk about project
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#contact-position" aria-controls="contact-position" role="tab" data-toggle="tab">
+                    <i class="fa fa-check-circle"></i>
+                    I wanna apply a position
+                  </a>
+                </li>
+                {% endif %}
+                <li role="presentation" class="active">
+                  <a href="#contact-say" aria-controls="contact-say" role="tab" data-toggle="tab">
+                    <i class="fa fa-check-circle"></i>
+                    I just want to drop my feedback
+                  </a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="contact-project">
+                  <form action="/contact_project/" method="post">{% csrf_token %}
+                    <div class="col-md-6">
+                      <label for="full_name">* Full Name</label>
+                      <input type="text" name="full_name" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email">* Email</label>
+                      <input type="email" name="email" class="form-control" placeholder="E.x: yourname@email.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone">* Phone</label>
+                      <input type="text" name="phone" class="form-control" placeholder="E.x: 0857 xxx xxx xxx">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="company_name">* Your Company</label>
+                      <input type="text" name="company_name" class="form-control" placeholder="Your company name">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="where_did_you_find_us">Where di you find us?</label>
+                      <select name="where_did_you_find_us" id="" class="form-control">
+                        <option value="">where did you find us</option>
+                        <option value="google">Google Search Engine</option>
+                        <option value="friend">Friends</option>
+                        <option value="forum">forum</option>
+                        <option value="others">others</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="budget">Your Budget</label>
+                      <select name="budget" id="" class="form-control">
+                        <option value="">Your budget</option>
+                        <option value="20000000-50000000">Rp. 20.000.000 - Rp.50.000.000</option>
+                        <option value="50000000-100000000">Rp. 50.000.000 - Rp.100.000.000</option>
+                        <option value="100000000-250000000">Rp. 100.000.000 - Rp.250.000.000</option>
+                        <option value="250000000-500000000">Rp. 250.000.000 - Rp.500.000.000</option>
+                        <option value="500000000-1000000000">Rp. 500.000.000 - Rp.1000.000.000</option>
+                        <option value="1000000000-1500000000">Rp. 1.000.000.000 - Rp.1.500.000.000</option>
+                        <option value="1500000000-2000000000">Rp. 1.500.000.000 - Rp.2.000.000.000</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="website_url">Website URL</label>
+                      <input type="url" name="website_url" class="form-control" placeholder="E.x: http://yoururldomain.com/">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="description">Please tell us a bit about you</label>
+                      <textarea class="form-control" name="description" cols="10" rows="10" placeholder="description"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="file">Document</label>
+                      <input type="file" name="file">
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <button type="submit" name="submit" class="btn btn-lg btn-nerdware-red">
+                        <i class="fa fa-send"></i>
+                        submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="contact-position">
+                  <form action="/contact_position/" method="post">{% csrf_token %}
+                    <div class="col-md-6">
+                      <label for="full_name">* Full Name</label>
+                      <input type="text" name="full_name" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email">* Email</label>
+                      <input type="email" name="email" class="form-control" placeholder="E.x: yourname@email.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone">* Phone</label>
+                      <input type="text" name="phone" class="form-control" placeholder="E.x: 0857 xxx xxx xxx">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="company_name">* Your Company</label>
+                      <input type="text" name="company_name" class="form-control" placeholder="Your company name">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="where_did_you_find_us">Where di you find us?</label>
+                      <select name="where_did_you_find_us" id="where_did_you_find_us" class="form-control">
+                        <option value="where_did_you_find_us">where did you find us</option>
+                        <option value="google">Google Search Engine</option>
+                        <option value="friend">Friends</option>
+                        <option value="forum">forum</option>
+                        <option value="others">others</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="applyfor">Apply for</label>
+                      <select name="applyfor" id="" class="form-control">
+                        <option value="">Category Position</option>
+                        <option value="google">Full Stack Developer</option>
+                        <option value="friend">Frontend Developer</option>
+                        <option value="forum">SEO Specialis</option>
+                        <option value="others">others</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="website_url">Website URL</label>
+                      <input type="url" name="website_url" class="form-control" placeholder="E.x: http://yoururldomain.com/">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="description">Please tell us a bit about you</label>
+                      <textarea class="form-control" name="description" cols="10" rows="10" placeholder="description"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <label for="file">Document</label>
+                      <input type="file" name="file">
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <button type="submit" name="submit" class="btn btn-lg btn-nerdware-red">
+                        <i class="fa fa-send"></i>
+                        submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="contact-say">
+                  <form action="/contact_say/" method="post">{% csrf_token %}
+                    <div class="col-md-6">
+                      <label for="full_name">* Full Name</label>
+                      <input type="text" name="full_name" class="form-control" placeholder="John Doe">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email">* Email</label>
+                      <input type="email" name="email" class="form-control" placeholder="E.x: yourname@email.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone">* Phone</label>
+                      <input type="text" name="phone" class="form-control" placeholder="E.x: 0857 xxx xxx xxx">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="company_name">* Subject</label>
+                      <input type="text" name="company_name" class="form-control" placeholder="Your company name">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="description">Message</label>
+                      <textarea class="form-control" name="description" cols="10" rows="10" placeholder="description"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                      <br>
+                      <button type="submit" name="submit" class="btn btn-lg btn-nerdware-red">
+                        <i class="fa fa-send"></i>
+                        submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE FORM CONTACT US -->
+
+      {% endblock content %}

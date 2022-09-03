@@ -1,0 +1,657 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nerdware System Technologies </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SCOPE MOBILE VERSION RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <!-- SCOPE ADD TO HOMESCREEN AND THEME COLOR -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Nerdware System Technologies">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- SCOPE COLOR FOR BROWSER CHROME, FIREFOX AND OPERA -->
+    <meta name="theme-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER WINDOWS PHONE -->
+    <meta name="msapplication-navbutton-color" content="#F17127">
+
+    <!-- SCOPE BROWSER IOS, SAFARI BROWSER -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- SCOPE SHARE FACEBOOK -->
+    <meta property="og:url" content="http://urlnya.com/"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Nerdware System Technologies"/>
+    <meta property="og:description" content="Nerdware System Technologies"/>
+    <meta property="og:image" content="URL IMAGE WEBSITE"/>
+
+    <!-- SCOPE SHARE TWITTER -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="apecsa"/>
+    <meta name="twitter:title" content="Nerdware System Technologies">
+    <meta name="twitter:description" content="Nerdware System Technologies"/>
+    <meta name="twitter:creator" content="Fathan Rohman"/>
+    <meta name="twitter:image:src" content="https://website.com/image250X250.png"/>
+    <meta name="twitter:domain" content="website.com"/>
+
+    <!-- SCOPE SHARE GOOGLE PLUS -->
+    <meta itemprop="name" content="Nerdware System Technologies"/>
+    <meta itemprop="description" content="Apecsa Optima Solusi (ApecsaOS) Bergerak di jasa pembuatan aplikasi, e-gov, erp, custom software, mobile application"/>
+    <meta itemprop="image" content="https://website.com/image250X250.png"/>
+
+    <!-- SCOPE STLYESHEET -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="icon" type="image/ico" href="{% static 'images/logo/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/revolution-slider.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.transitions.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main-responsive.css' %}">
+  
+    {% block css%} 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% endblock css %}
+
+    <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
+    <style>
+      .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      line-height: 1;
+      margin:auto;
+      width: 100%;
+      }
+      .carousel-caption {
+        width:100%;
+        height:50%;
+        left:0 !important;
+      }
+      
+      .navbar-brand {
+        padding: 0px;
+        height: 40px;}
+      
+      .navbar-caption {
+        padding: 0px;
+        margin-top: 5px;
+        margin-left: 50px;
+        height: 0px; }
+
+      .navbar-brand > img {
+        height: 100%;
+        margin-top: 4px;
+        padding: 0px;
+        width: auto; }
+        .navbar {
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border: 0px solid transparent;
+        box-shadow: 0 1px 2px #bbbbbb;
+        text-transform: normal;
+        font-family: source-sans-pro-semibold; }
+
+      .navbar-default {
+        background-color: #F17127; }
+
+      .navbar-collapse,
+      .navbar-header {
+        margin: 6px 0px; }
+
+      .navbar-default .navbar-nav > li > a {
+        color: #222222; }
+
+      .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: #F17127;
+        background-color: transparent; }
+      body { background-color: #f27128; }
+
+      
+    </style>
+
+  </head>
+ 
+  <body>
+    <div class="apecsaos-wrapper">
+
+      <!-- START SCOPE NAVBAR BOOTSTRAP -->
+      
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-apecsaos" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                  <img src="{% static 'images/logo/logo.png' %}"  width="100" height="100" alt="" class="d-inline-block align-middle mr-2"/>
+                </a>
+                <h1 class = "navbar-caption">Nerdware Systems</h1>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  {% block navbar %}
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="/aboutus/">About Us</a></li>
+                  <li><a href="/services/">Services</a></li>
+                  <li><a href="/portfolio/">Portfolio</a></li>
+                  <li><a href="/blog/">Blogs</a></li>
+                  <!-- <li><a href="/career/">Careers</a></li> -->
+                  <li><a href="/contactus/">Contact Us</a></li>
+                  {% endblock navbar %}
+                  {% if request.user.is_superuser %}
+                  {% if user.is_superuser%}
+                  <li><a href="/contactus/">Management</a></li>
+                  {% endif %}
+                  <li><a href="{% url 'profile' %}" id="auth-links">{{user.username}}</a></li>
+                    {% else %}
+                   <li><a href="{% url 'login' %}" >Log-in</a></li>
+                    {% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- New Scope-->
+      <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="defaultForm-email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="defaultForm-pass" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- END SCOPE NAVBAR BOOTSTRAP -->
+      {% block content %}
+      <!-- START SCOPE CAROUSEL SLIDER -->
+      <div class ="section">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+      
+            <div class="item active">
+              <img src="{% static 'images/slider/slider_4.gif' %}" class="d-block w-100" alt="Los Angeles" style="height: 600px;">
+              <div class="carousel-caption">
+                <div class="desc color-red">
+                <h1> Welcome to Nerdware System Technologies </h1>
+                </div>
+              </div>
+            </div>
+      
+            <div class="item">
+              <img src="{% static 'images/slider/slider_7.jpg' %}" class="d-block w-100" alt="Chicago" style="height: 600px;">
+              <div class="carousel-caption">
+                <div class="desc color-white">
+                  <h2>
+                Do you want to connect with us?
+                <br>We are readily available on phone, email and various social media channels. 
+                <br>We will be glad to hear from you!</h2>
+              <br>
+              <br>
+                <a href="/contactus/#contact-nerdware" class="btn btn-nerdware-red btn-lg">
+                <i class="fa fa-envelope"></i>
+                Nerdware Systems
+              </a>
+            </div>
+              </div>
+            </div>
+          
+            <div class="item">
+              <img src="{% static 'images/slider/slider_5.jpg' %}" class="d-block w-100" alt="New York" style="height: 600px;">
+              <div class="carousel-caption">
+                <h3>New York</h3>
+                <p>We love the Big Apple!</p>
+              </div>
+            </div>
+        
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </section>
+      <!-- END SCOPE CAROUSEL SLIDER -->
+
+          <!-- START SCOPE DEVELOPMENT CATEGORIES -->
+          <section class="development-categories bg-gray">
+            <div class="container">
+              <div class="col-md-12">
+                <div class="box-title-desc">
+                  <div class="title color-black bdr-btm-gray">
+                    <span class="bg-section">Development Categories</span>
+                  </div>
+                  <div class="desc color-black">
+                    Do you have an idea about what services you actually need? We can make it clearer for you, letting you know all the possibilities of the proposed idea. You are always welcome for an initial assessment.
+    
+    Want to go digital?
+    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="box-categories">
+                    <div class="col-md-4">
+                      <div class="list-categories">
+                        <div class="box-icon">
+                          <div class="icon bg-red-light">
+                            <i class="fa fa-desktop"></i>
+                          </div>
+                        </div>
+                        <div class="title">
+                          Web Development
+                        </div>
+                        <div class="description">
+                          <p>
+                            <!-- We always start from a blank canvas to design each of our projects. We love new ideas that we can incorporate in designing websites. -->
+                            Looking for custom web applications? We offer solutions designed to satisfactorily cater to your needs. We cherish new ideas and will be sure to integrate them in our design and implementation.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="list-categories">
+                        <div class="box-icon">
+                          <div class="icon bg-red-light">
+                            <i class="fa fa-mobile"></i>
+                          </div>
+                        </div>
+                        <div class="title">
+                          Mobile Development
+                        </div>
+                        <div class="description">
+                          <p>
+                            <!-- We always start from blank canvas to design each of our projects. We love new ideas that we can incorporate in designing websites. -->
+                            You need someone who understands your mobile development needs. We will be sure to provide you with custom mobile apps that will make you unique and enable you to leverage your business. 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="list-categories">
+                        <div class="box-icon">
+                          <div class="icon bg-red-light">
+                            <i class="fa fa-heart"></i>
+                          </div>
+                        </div>
+                        <div class="title">
+                          Search Engine Optimation
+                        </div>
+                        <div class="description">
+                          <p>
+                            <!-- We always start from blank canvas to design each of our projects. We love new ideas that we can incorporate in designing websites. -->
+                            Want to appear on top of the search list? We offer SEO services that will transform your business and provide you with a competitive edge.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SCOPE DEVELOPMENT CATEGORIES -->
+    
+          <!-- START SCOPE INTRODUCE PORTFOLIO -->
+          <section class="parallax-nerdware bg-img-1 introduce-wrapper portfolio">
+            <div class="bg-overlay-full"></div>
+            <div class="container">
+              <div class="col-md-12">
+                <div class="box-title-desc">
+                  <div class="title color-white">
+                    <span class="color-white">Cloud Kids Mashinani</span>
+                  </div>
+                  <div class="desc color-white">
+                    Our vision is to translate knowledge into innovative applications that will have significant societal and economic impacts.
+                  </div>
+                  <a href="/cloudkids/" class="btn btn-nerdware-red btn-lg">
+                    <i class="fa fa-bars"></i>
+                    Clouds Kids Mashinani
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SCOPE INTRODUCE PORTFOLIO -->
+    
+          <!-- START SCOPE TESTIMONIAL CLIENT -->
+          <section class="testimonial-client">
+            <div class="container">
+              <div class="col-md-12">
+                <div class="box-title-desc">
+                  <div class="title color-black bdr-btm-gray">
+                    <span class="bg-section">Testimonial Client</span>
+                  </div>
+                  <div class="desc color-black">
+                    At Nerdware Systems, client satisfaction is our ultimate goal.<br>
+                    Hear what our clients say about us.<br>
+                          You will not regret choosing us!
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="box-testimonial" id="owl-slide-testimonial">
+                  <div class="col-lg-12">
+                    <div class="item list-testimonial">
+                      <div class="box-quote">
+                        <p>
+                          <!-- Nerdware has built me from junior front end developer to a senior developement with a vast market understanding. -->
+                          I was looking for a company that would implement for me an e-commerce site. Nerdware understood the assignment and was able to deliver an impressive app that has transformed my business. My customer conversion rate has increased by 75 percent.  
+                        </p>
+                      </div>
+                      <div class="box-client">
+                        <div class="box-avatar">
+                          <div class="avatar">
+                            <img src="{% static 'images/client/br.jpg' %}" alt="">
+                          </div>
+                        </div>
+                        <div class="box-name-wrapper">
+                          <div class="name">
+                            <span class="name">
+                              Timothy Talam  
+                              <!-- <span class="position">Frontend Developer</span> -->
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="item list-testimonial">
+                      <div class="box-quote">
+                        <p>
+                          
+                         I needed a mobile app to help in managing and marketing my rental units. Nerdware developed an app that was able to streamline the process of connecting new tenants with landlords so that they could get save time and money when searching for apartments.
+                        </p>
+                      </div>
+                      <div class="box-client">
+                        <div class="box-avatar">
+                          <div class="avatar">
+                            <img src="{% static 'images/client/musta.jpg' %}" alt="">
+                          </div>
+                        </div>
+                        <div class="box-name-wrapper">
+                          <div class="name">
+                            <span class="name">
+                              Susan Chepkemoi - 
+                               <span class="position">Landlady</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="item list-testimonial">
+                      <div class="box-quote">
+                        <p>
+                          I wanted my website to appear on top of Google Search so that I could get more clients. Nerdware was able to assist me and today, my website ranks very high in search engines and my business has experienced a surge in orders.
+                        </p>
+                      </div>
+                      <div class="box-client">
+                        <div class="box-avatar">
+                          <div class="avatar">
+                            <img src="{% static 'images/client/will.png' %}" alt="">
+                          </div>
+                        </div>
+                        <div class="box-name-wrapper">
+                          <div class="name">
+                            <span class="name">
+                              Elijah Khajira- 
+                              <span class="position">CEO, EllyHill</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="item list-testimonial">
+                      <div class="box-quote">
+                        <p>
+                          I sell shoes online and wanted an app that customers could make orders and have them delivered. Nerdware was able to develop the app which streamlined the process; making it easier for my customers to view the products, make orders and have them delivered. 
+                        </p>
+                      </div>
+                      <div class="box-client">
+                        <div class="box-avatar">
+                          <div class="avatar">
+                            <img src="{% static 'images/client/user1.jpg' %}" alt="">
+                          </div>
+                        </div>
+                        <div class="box-name-wrapper">
+                          <div class="name">
+                            <span class="name">
+                              Jescinta C - 
+                              <span class="position">Entrepreneur</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <a class="btn prev btn-default">
+                    <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a class="btn next btn-default">
+                    <i class="fa fa-angle-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SCOPE TESTIMONIAL CLIENT -->
+    
+    
+      <!-- END SCOPE INTRODUCE CONTACT US -->
+      {% endblock %}
+      
+      <section></section>
+      {% block paginator %}
+      {% endblock paginator %}
+      {% block footer %}
+      <!-- START SCOPE FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="social-media">
+                <a href="http://facebook.com" class="btn btn-default btn-social-media facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="http://twitter.com" class="btn btn-default btn-social-media twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="http://linkedin.com" class="btn btn-default btn-social-media linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="http://instagram.com" class="btn btn-default btn-social-media instagram">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+              <div class="corpyright">
+                <span>&copy; Copyright 2022. Nerdware Systems Inc </span><br>
+                <span>Pushing Technologies to the Limits</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      {% endblock footer %}
+      <!-- END SCOPE FOOTER -->
+      <a href="" id="back-to-top" data-toggle="tooltip" data-placement="top" title="Back to top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </body>
+
+  <!-- SCOPE JAVASCRIPT -->
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="{% static 'js/jquery.scrolltofixed.js' %}"></script>
+  <script src="{% static 'js/revolution.min.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script src="{% static 'js/jquery.scrollspeed.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/incremental.number.js' %}"></script>
+  {% block script %}
+  <script>
+    (function($) {
+
+      "use strict";
+
+      //Main Slider
+      if($('.slider-nerdware .tp-banner').length){
+        jQuery('.slider-nerdware .tp-banner').show().revolution({
+          delay:10000,
+          startwidth:1200,
+          startheight:450,
+          hideThumbs:600,
+
+          thumbWidth:80,
+          thumbHeight:50,
+          thumbAmount:5,
+
+          navigationType:"bullet",
+          navigationArrows:"0",
+          navigationStyle:"preview4",
+
+          touchenabled:"on",
+          onHoverStop:"off",
+
+          swipe_velocity: 0.7,
+          swipe_min_touches: 1,
+          swipe_max_touches: 1,
+          drag_block_vertical: false,
+
+          parallax:"mouse",
+          parallaxBgFreeze:"on",
+          parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+          keyboardNavigation:"off",
+
+          navigationHAlign:"center",
+          navigationVAlign:"bottom",
+          navigationHOffset:0,
+          navigationVOffset:20,
+
+          soloArrowLeftHalign:"left",
+          soloArrowLeftValign:"center",
+          soloArrowLeftHOffset:20,
+          soloArrowLeftVOffset:0,
+
+          soloArrowRightHalign:"right",
+          soloArrowRightValign:"center",
+          soloArrowRightHOffset:20,
+          soloArrowRightVOffset:0,
+
+          shadow:0,
+          fullWidth:"on",
+          fullScreen:"on",
+
+          spinner:"spinner4",
+
+          stopLoop:"off",
+          stopAfterLoops:-1,
+          stopAtSlide:-1,
+
+          shuffle:"off",
+
+          autoHeight:"off",
+          forceFullWidth:"on",
+
+          hideThumbsOnMobile:"on",
+          hideNavDelayOnMobile:1500,
+          hideBulletsOnMobile:"on",
+          hideArrowsOnMobile:"on",
+          hideThumbsUnderResolution:0,
+
+          hideSliderAtLimit:0,
+          hideCaptionAtLimit:0,
+          hideAllCaptionAtLilmit:0,
+          startWithSlide:0,
+          videoJsPath:"",
+          fullScreenOffsetContainer: ".slider-nerdware"
+        });
+      }
+
+    })(window.jQuery);
+  </script>
+  <script>
+    $(document).ready(function() {
+
+      var owl = $("#owl-slide-testimonial");
+     
+      owl.owlCarousel({
+          items : 2, //10 items above 1000px browser width
+          itemsDesktop : [1000,2], //5 items between 1000px and 901px
+          itemsDesktopSmall : [900,2], // betweem 900px and 601px
+          itemsTablet: [600,1], //2 items between 600 and 0
+          itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+      });
+
+      // Custom Navigation Events
+      $(".next").click(function(){
+        owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+        owl.trigger('owl.prev');
+      })
+    });
+  </script>
+  {% endblock script %}
